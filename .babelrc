@@ -1,7 +1,7 @@
 {
-  "presets": [
+  "presets": [ // 将es6的语法翻译成es5语法
     [
-      "@babel/preset-env", {  // 将es6的语法翻译成es5语法
+      "@babel/preset-env", {
       "targets": {
         "chrome": "67",
       },
@@ -12,11 +12,18 @@
     "@babel/preset-react",
   ],
   "plugins": [
-    "@babel/plugin-proposal-class-properties",
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
     ["import", {
       "libraryName": "antd",
       "libraryDirectory": "es",
       "style": "css" // `style: true` 会加载 less 文件
-    }]
+    }],
+    "@babel/plugin-proposal-class-properties",
+    "dva-hmr"
   ]
 }
