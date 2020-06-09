@@ -15,7 +15,8 @@
     "lint": "npm run eslint && npm run stylelint",
     "eslint": "eslint --ext .js,.jsx src",
     "auto-redux": "./node_modules/@stonescott/reduxscripts/scripts/index.js",
-    "stylelint": "stylelint \"src/**/*.less\" --syntax less"
+    "stylelint": "stylelint \"src/**/*.less\" --syntax less",
+    "auto-git": "./build/git-auto-commit.js"
   },
   "author": "Stone",
   "license": "ISC",
@@ -77,6 +78,7 @@
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "redbox-react": "^1.6.0",
+    "shelljs": "^0.8.4",
     "webpack-merge": "^4.2.1",
     "webpackbar": "^3.2.0",
     "workbox-webpack-plugin": "^4.3.1"
