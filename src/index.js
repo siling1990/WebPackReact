@@ -11,12 +11,17 @@ const app = dva({
         }),
         stringify,
         parse
-    )
+    ),
+    initialState:{
+        home:{title:'home'},
+        setData:{title:'setData'}
+    }
 });
 // app.use();
 // 2. Model
 app.model(require('./login/model').default);
 app.model(require('./home/model').default);
+app.model(require('./setData/model').default);
 // 3. Router
 app.router(require('./router').default);
 // 4. Start

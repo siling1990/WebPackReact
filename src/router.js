@@ -7,6 +7,7 @@ import {
 } from 'dva/router';
 import Home from './home';
 import Login from './login';
+import SetData from './setData';
 import './index.less';
 
 const {ConnectedRouter} = routerRedux;
@@ -18,6 +19,7 @@ export default function Router({history}) {
         <Route path="/" exact component={Login} />
         <Route path='/login' component={Login}/>
         <Route path="/home" component={Home} />
+        <Route path="/setData" component={SetData} />
       </Switch>
     </ConnectedRouter>
   );
